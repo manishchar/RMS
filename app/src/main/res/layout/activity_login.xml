@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_back"
+    tools:context="alina.com.rms.activities.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dip"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/logo" />
+    <LinearLayout
+        android:layout_below="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="20dip"
+        android:paddingBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@color/transparentWhite"
+        android:id="@+id/linearLayout">
+
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:singleLine="true"
+            android:maxLength="40"
+            android:paddingLeft="10dip"
+            android:hint="Enter Email"
+            android:textColor="@color/whiteColor"
+            android:textColorHint="@color/whiteColor"
+            android:background="@drawable/textbox_front"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="@color/whiteColor"
+            android:textColorHint="@color/whiteColor"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dip"
+            android:hint="Enter Password"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/textbox_front"
+            android:drawableLeft="@drawable/password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_marginTop="5dip"
+            android:textColor="@color/whiteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Forgot Password?" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/loginImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="46dip"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@color/tranparentColor"
+        app:srcCompat="@drawable/login_btn_back" />
+</RelativeLayout>

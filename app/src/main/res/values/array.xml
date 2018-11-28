@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="random_imgs">
+        <item>@drawable/dashboard</item>
+        <item>@drawable/round1</item>
+        <item>@drawable/group4</item>
+        <item>@drawable/round3</item>
+        <item>@drawable/round4</item>
+        <item>@drawable/report</item>
+        <item>@drawable/book</item>
+        <item>@drawable/logout</item>
+    </integer-array>
+
+
+    <integer-array name="random_splash_imgs">
+        <item>@drawable/about</item>
+        <item>@drawable/ongoingproject</item>
+        <item>@drawable/coreatglance</item>
+        <item>@drawable/zone</item>
+        <item>@drawable/ongoingproject</item>
+        <item>@drawable/trenelectrication</item>
+        <item>@drawable/benifits</item>
+        <item>@drawable/feedback</item>
+    </integer-array>
+
+
+    <integer-array name="random_imgs_super_admin">
+        <item>@drawable/dashboard</item>
+        <item>@drawable/round1</item>
+        <item>@drawable/group4</item>
+        <!-- <item>@drawable/book</item>-->
+        <item>@drawable/round1</item>
+        <!--        <item>@drawable/book</item>
+                <item>@drawable/book</item>
+                <item>@drawable/book</item>-->
+        <item>@drawable/logout</item>
+    </integer-array>
+
+    <integer-array name="random_imgs_group">
+        <item>@drawable/dashboard</item>
+        <item>@drawable/group4</item>
+        <item>@drawable/book</item>
+        <item>@drawable/logout</item>
+    </integer-array>
+
+    <integer-array name="random_imgs_headquater">
+        <item>@drawable/dashboard</item>
+        <item>@drawable/round1</item>
+        <item>@drawable/group4</item>
+        <item>@drawable/round3</item>
+        <item>@drawable/round4</item>
+        <item>@drawable/book</item>
+        <item>@drawable/report</item>
+        <!--<item>@drawable/report</item>-->
+        <item>@drawable/logout</item>
+    </integer-array>
+
+    <integer-array name="random_imgs_user">
+        <item>@drawable/report</item>
+        <item>@drawable/report</item>
+        <item>@drawable/logout</item>
+    </integer-array>
+    <integer-array name="random_imgs_public_module">
+
+        <!--<item>@drawable/book</item>-->
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/logout</item>
+    </integer-array>
+
+    <integer-array name="random_imgs_speical_user">
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/book</item>
+        <item>@drawable/logout</item>
+    </integer-array>
+</resources>

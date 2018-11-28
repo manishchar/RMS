@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="alina.com.rms">
+
+    <!-- if you want to load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="true" />
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="alina.com.rms.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/photo_path" />
+        </provider>
+
+        <activity android:name=".activities.SplashScreen"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SplashScreen2"
+            android:screenOrientation="portrait">
+
+            <!--
+                                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name=".activities.RecoveryPasswodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- User Activity -->
+        <!--
+            <activity
+            android:name=".activities.userActivities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activities.userActivities.PSIMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RecoveryPasswodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.userActivities.OHEActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.userActivities.SPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.userActivities.SSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.userActivities.TSSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.userActivities.WebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.userActivities.TSSWebViewActivity"
+            android:screenOrientation="landscape" />
+        -->
+
+
+        <!-- Super Admin -->
+        <activity
+            android:name=".activities.superAdminActivities.MainActivitySuperAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminGroupList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminHQList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.WeeklyMainActivitySuperAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.PublicMouleSuperAdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminPublicModuleList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminFoundationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminNewEntryFoundationList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminViewFoundationList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminFoundationEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminViewMastErictionList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminMastErictionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminNewEntryMastErictionList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminMastErictionEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminViewWiringList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminWiringEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminWiringActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminNewEntryProgressList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.superAdminActivities.SuperAdminPublicMouleEditActivity"
+            android:screenOrientation="portrait" />
+
+        <!--
+            <activity android:name=".activities.userActivitSuperAdminSSPActivityvity"
+            android:screenOrientation="portrait"
+            ></activity>
+        -->
+
+        <activity
+            android:name=".activities.superAdminActivities.AddUserForSuperAdmin"
+            android:screenOrientation="portrait" />
+
+        <!-- Group Activities -->
+
+        <activity
+            android:name=".activities.groupActivities.GroupMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.groupActivities.AddUserForGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.groupActivities.GroupGroupList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.groupActivities.GroupPSIMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.groupActivities.GroupTSSWebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.groupActivities.GroupWebViewActivity"
+            android:screenOrientation="landscape" />
+
+        <!-- headquater Activity -->
+
+        <activity
+            android:name=".activities.headquaterActivities.AddUserForHeaduater"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.PSIMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.HeadquaterMasterListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.AddMasterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.HeaduaterGroupList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.HeaduaterTSSWebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.headquaterActivities.HeaduaterWebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.headquaterActivities.MainActivityHeaduater"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.HeaduaterUserList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.HeadquaterSectionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.MainActivityHeaduaterTarget"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.AddSectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.OHETargetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.TSSTargetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.SPTargetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.SSPTargetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.ProcessHeadquaterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.ProcessTSSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.ProcessSSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquaterActivities.ProcessSPActivity"
+            android:screenOrientation="portrait" />
+        <!-- Entry User -->
+
+        <activity
+            android:name=".activities.user_entry_section.MainActivityEntryUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.user_entry_section.ProcessHeadquaterEntryUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.user_entry_section.ProcessSPEntryUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.user_entry_section.ProcessSSPUserSectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.user_entry_section.ProcessTSSEntryUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.user_entry_section.EntryUserTSSWebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.user_entry_section.EntryUserWebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.public_module.PublicMouleListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.PublicMouleEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.PublicModuleNewEntryProgressList"
+            android:screenOrientation="portrait" />
+
+        <!--
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        -->
+
+
+        <activity
+            android:name=".activities.public_module.ohe_progress.PublicModuleViewProgressOHEList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.ohe_progress.PublicModuleProgressEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.ohe_progress.PublicModuleProgressOHEActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.report.PublicModuleReportActivityHeaduater"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.report.PubLicViewOheSspSpWebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.public_module.report.PublicViewTSSWebViewActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".activities.public_module.sp_progress.PublicModuleProgressSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.sp_progress.PublicModuleProgressSPEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.sp_progress.PublicModuleProgressSPList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.ssp_progress.PublicModuleProgressSSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.ssp_progress.PublicModuleProgressSSPEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.ssp_progress.PublicModuleProgressSSPList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activities.public_module.tss_progress.PublicModuleProgressEditTSSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.tss_progress.PublicModuleProgressTSSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.public_module.tss_progress.PublicModuleViewProgressTSSList"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activities.public_module.PublicUserMainActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activities.public_module.PublicMouleActivity"
+            android:screenOrientation="portrait" />
+        <!-- Special User -->
+        <activity
+            android:name=".activities.special_user.SpecialUserFoundationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserNewEntryFoundationList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserViewFoundationList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserFoundationEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserViewMastErictionList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserMastErictionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserNewEntryMastErictionList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserMastErictionEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserViewWiringList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserWiringEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserWiringActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserNewEntryProgressList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserPublicMouleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserPublicMouleListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserPublicMouleEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.special_user.SpecialUserMainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Special User -->
+
+
+        <!-- headquater special user -->
+
+        <activity
+            android:name=".activities.headquater_special_user.HeadQuaterSpecialUserMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.ohe_progress.HeadQuaterSpecialUserViewProgressOHEList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.ohe_progress.HeadQuaterSpecialUserProgressOHEActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.ohe_progress.HeadQuaterSpecialUserProgressEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.sp_progress.HeadQuaterSpecialUserViewProgressSPList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.sp_progress.HeadQuaterSpecialUserProgressSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.sp_progress.HeadQuaterSpecialUserProgressSPEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.tss_progress.HeadQuaterSpecialUserProgressEditTSSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.tss_progress.HeadQuaterSpecialUserProgressTSSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.tss_progress.HeadQuaterSpecialUserViewProgressTSSList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.ssp_progress.HeadQuaterSpecialUserProgressSSPEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.ssp_progress.HeadQuaterSpecialUserProgressSSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.ssp_progress.HeadQuaterSpecialUserViewProgressSSPList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.headquater_special_user.report.ReportActivityHeaduater"
+            android:screenOrientation="portrait" />
+        <!-- End of headquater specialUser -->
+
+        <receiver
+            android:name=".reciver.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.reporting_user.HomeReportingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.reporting_user.ReportingProjectActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.reporting_user.ReportWebViewActivity"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>

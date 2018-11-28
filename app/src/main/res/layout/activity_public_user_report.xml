@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_nav"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/whiteColor"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/proj_linear"
+            android:visibility="gone"
+            >
+        <TextView
+            android:id="@+id/headquaterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_headquater_project"
+            android:layout_marginTop="10dip"
+            android:inputType="textCapWords"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rel_headquater"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/group" android:contentDescription="@string/todo" />
+            <Spinner
+                android:layout_marginTop="3dip"
+                android:id="@+id/spinner_project"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/tranparentColor"
+                android:paddingLeft="40dp"
+                android:paddingRight="20dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:layout_height="wrap_content"
+                android:paddingStart="40dp" android:paddingEnd="20dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/droparrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo" android:layout_marginEnd="18dp" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/group_linear"
+        android:visibility="gone"
+        >
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_group"
+        android:layout_marginTop="10dip"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/darker_gray"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/group" android:contentDescription="@string/todo" />
+        <Spinner
+            android:layout_marginTop="3dip"
+            android:id="@+id/group_spinner"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/tranparentColor"
+            android:paddingLeft="40dp"
+            android:paddingRight="20dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/darker_gray"
+            android:layout_height="wrap_content"
+            android:paddingStart="40dp" android:paddingEnd="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/droparrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo" android:layout_alignParentEnd="true" android:layout_marginEnd="18dp" />
+    </RelativeLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:id="@+id/section_linear"
+            android:visibility="gone"
+            >
+        <TextView
+            android:id="@+id/placeName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_section"
+            android:layout_marginTop="5dip"
+            android:inputType="textCapWords"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/section"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/todo" />
+            <Spinner
+                android:layout_marginTop="3dip"
+                android:id="@+id/section_spinner"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="20dp"
+                android:background="@color/tranparentColor"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:layout_height="wrap_content"
+                android:paddingStart="40dp" android:paddingEnd="20dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/droparrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo" android:layout_alignParentEnd="true" android:layout_marginEnd="18dp" />
+        </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/station_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/placeName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:inputType="textCapWords"
+                android:text="@string/select_station"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/section" />
+
+                <Spinner
+                    android:id="@+id/station_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/tranparentColor"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="40dp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/droparrow" />
+            </RelativeLayout>
+        </LinearLayout>
+
+<!--        <LinearLayout
+            android:id="@+id/type_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/placeName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:inputType="textCapWords"
+                android:text="Select Type"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smalltextbox">
+
+                <Spinner
+                    android:id="@+id/select_type_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/whiteColor"
+                    android:textColor="@android:color/darker_gray" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/droparrow" />
+            </RelativeLayout>
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="40dp"
+
+            >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab"
+            android:text="@string/ohe"
+            android:id="@+id/btn_ohe"
+            android:textColor="@color/whiteColor"
+            android:layout_marginRight="3dp"
+
+            android:layout_marginEnd="3dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:text="@string/psi"
+                android:id="@+id/btn_psi"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/whiteColor"
+                android:layout_marginStart="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:text="@string/tr_line"
+                android:id="@+id/btn_tr_line"
+                android:textColor="@color/whiteColor"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab"
+                android:text="@string/other"
+                android:id="@+id/btn_other"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/whiteColor"
+                android:layout_marginStart="3dp" />
+        </LinearLayout>
+
+<!--        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/target_type_linear"
+                >
+        <TextView
+            android:id="@+id/placeName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target Type"
+            android:layout_marginTop="5dip"
+            android:inputType="textCapWords"
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/smalltextbox"
+            >
+            <Spinner
+                android:layout_marginTop="3dip"
+                android:id="@+id/target_type_spinner"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/whiteColor"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/droparrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+            </LinearLayout>-->
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

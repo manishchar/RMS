@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7772b5</color>
+    <color name="colorPrimaryDark">#7772b5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="btn_text_color">#7772b5</color>
+    <color name="transparentWhite">#7fffffff</color>
+    <color name="tranparentColor">#00ffffff</color>
+    <color name="tranparent_black">#56454545</color>
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "444064352898",
+    "firebase_url": "https://rms-india.firebaseio.com",
+    "project_id": "rms-india",
+    "storage_bucket": "rms-india.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444064352898:android:b29c90cf12cfa7fc",
+        "android_client_info": {
+          "package_name": "alina.com.rms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444064352898-763cgt6r02os8tnabnnb1701l79r4c8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alina.com.rms",
+            "certificate_hash": "8475f0a1885cea5ef4b65f43fbc9b785b9ba4c7f"
+          }
+        },
+        {
+          "client_id": "444064352898-ai93t36it6dsuvvibcqm9o8245rsj6t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXpeJKz3JAHVy3pNDNt5oMndHxaBInv0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444064352898-ai93t36it6dsuvvibcqm9o8245rsj6t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

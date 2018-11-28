@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_nav"
+    tools:context="alina.com.rms.activities.headquaterActivities.OHETargetActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dip"
+           android:background="@color/whiteColor"
+           android:orientation="vertical"
+           android:padding="10dip">
+
+           <TextView
+               android:id="@+id/placeName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dip"
+               android:layout_weight="1.8"
+               android:inputType="textCapWords"
+               android:text="Select Group"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:textColor="@android:color/darker_gray"
+               android:textSize="18sp"
+               android:visibility="gone" />
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:visibility="gone">
+
+               <Spinner
+                   android:id="@+id/spinner_target"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:layout_marginLeft="3dp"
+                   android:layout_marginRight="3dp"
+                   android:layout_marginTop="3dip"
+                   android:background="@color/whiteColor"
+                   android:textColor="@android:color/darker_gray" />
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="10dp"
+                   android:src="@drawable/droparrow" android:layout_marginEnd="10dp" />
+           </RelativeLayout>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dip"
+               android:inputType="textCapWords"
+               android:text="Select Item"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:textColor="@android:color/darker_gray"
+               android:textSize="14sp"
+               android:visibility="gone" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dip"
+               android:orientation="horizontal"
+               android:visibility="gone"
+               android:weightSum="2">
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+
+                   android:inputType="textCapWords"
+                   android:text="Select Month"
+                   android:textAppearance="?android:attr/textAppearanceLarge"
+                   android:textColor="@android:color/darker_gray"
+                   android:textSize="14sp" />
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:inputType="textCapWords"
+                   android:text="Select Year"
+                   android:textAppearance="?android:attr/textAppearanceLarge"
+                   android:textColor="@android:color/darker_gray"
+                   android:textSize="14sp" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:visibility="gone"
+               android:weightSum="2">
+
+               <RelativeLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/blanck_section" />
+
+                   <Spinner
+                       android:id="@+id/spinner_month"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:layout_marginLeft="3dp"
+                       android:layout_marginRight="3dp"
+                       android:layout_marginTop="3dip"
+                       android:background="@color/tranparentColor"
+                       android:paddingLeft="15dp"
+                       android:textColor="@android:color/darker_gray" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"
+                       android:layout_marginRight="10dp"
+                       android:src="@drawable/droparrow" />
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/blanck_section" />
+
+                   <Spinner
+                       android:id="@+id/spinner_year"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:layout_marginLeft="3dp"
+                       android:layout_marginRight="3dp"
+                       android:layout_marginTop="3dip"
+                       android:background="@color/tranparentColor"
+                       android:paddingLeft="15dp"
+                       android:textColor="@android:color/darker_gray" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"
+                       android:layout_marginRight="10dp"
+                       android:src="@drawable/droparrow" android:layout_marginEnd="10dp" />
+               </RelativeLayout>
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:id="@+id/linear_add"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"></LinearLayout>
+
+           <TextView
+               android:id="@+id/date"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dip"
+               android:inputType="textCapWords"
+               android:text="Date,Month,Year"
+               android:textAppearance="?android:attr/textAppearanceLarge"
+               android:textColor="@android:color/darker_gray"
+               android:textSize="18sp"
+               android:visibility="gone" />
+
+           <RelativeLayout
+               android:id="@+id/selected_date_relative"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingLeft="3dp"
+               android:visibility="gone">
+
+               <TextView
+                   android:id="@+id/selected_date_text"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:layout_marginLeft="3dp"
+                   android:drawableRight="@drawable/droparrow"
+                   android:paddingRight="10dp"
+                   android:textAppearance="?android:attr/textAppearanceSmall"
+                   android:textSize="14sp" />
+           </RelativeLayout>
+
+           <Button
+               android:id="@+id/btn_show"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:background="@color/tranparentColor"
+               android:text="Click here to show EIG &amp; CRS Papers"
+               android:textColor="@color/colorPrimary" />
+
+           <LinearLayout
+               android:id="@+id/linear_hide_show"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dip"
+                   android:inputType="textCapWords"
+                   android:text="Date of submission of EIG papers"
+                   android:textAppearance="?android:attr/textAppearanceLarge"
+                   android:textColor="@android:color/darker_gray"
+                   android:textSize="18sp" />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:paddingLeft="3dp">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/blanck_section" />
+
+                   <TextView
+                       android:id="@+id/selected_date_text1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:layout_marginLeft="3dp"
+                       android:paddingLeft="42dp"
+                       android:paddingRight="10dp"
+                       android:textAppearance="?android:attr/textAppearanceSmall"
+                       android:textSize="14sp" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"
+                       android:layout_marginRight="10dp"
+                       android:src="@drawable/droparrow" />
+               </RelativeLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dip"
+                   android:inputType="textCapWords"
+                   android:text="@string/date_of_submission_of_crs_papers"
+                   android:textAppearance="?android:attr/textAppearanceLarge"
+                   android:textColor="@android:color/darker_gray"
+                   android:textSize="18sp" />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:paddingLeft="3dp">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/blanck_section" />
+
+                   <TextView
+                       android:id="@+id/selected_date_text2"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:layout_marginLeft="3dp"
+
+                       android:paddingLeft="42dp"
+                       android:paddingRight="10dp"
+                       android:textAppearance="?android:attr/textAppearanceSmall"
+                       android:textSize="14sp" android:paddingEnd="10dp" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"
+                       android:layout_marginRight="10dp"
+                       android:src="@drawable/droparrow" />
+               </RelativeLayout>
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:gravity="center"
+               android:orientation="horizontal"
+               android:weightSum="2">
+
+
+               <EditText
+                   android:id="@+id/targetEditText"
+                   android:layout_width="150dip"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="3dip"
+                   android:background="@drawable/smalltextbox"
+                   android:ems="10"
+                   android:gravity="center"
+                   android:hint="Set target"
+                   android:inputType="numberDecimal"
+                   android:paddingLeft="3dp"
+                   android:paddingRight="3dp"
+                   android:textSize="14sp"
+                   android:visibility="gone" />
+
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/submitBtn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="30dip"
+               android:background="@drawable/submit_btn"
+               android:paddingBottom="5dp"
+               android:text="Submit"
+               android:textColor="@color/whiteColor" />
+
+       </LinearLayout>
+   </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

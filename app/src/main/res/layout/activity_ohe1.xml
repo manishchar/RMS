@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_nav"
+    tools:context="alina.com.rms.activities.userActivities.OHEActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dip"
+    android:padding="10dip"
+    android:background="@color/whiteColor"
+    >
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8"
+        android:orientation="horizontal"
+        android:id="@+id/radioBtnGroup"
+        android:visibility="gone"
+        >
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.8"
+        android:textSize="15sp"
+        android:checked="true"
+        android:id="@+id/radioBtnCivil"
+        android:textColor="@android:color/darker_gray"
+        android:text="Civil works" />
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.8"
+        android:textSize="15sp"
+        android:id="@+id/radioBtnElectrical"
+        android:textColor="@android:color/darker_gray"
+        android:text="Electrical works" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/item_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:inputType="textCapWords"
+            android:text="Select Item"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/blanck_section" />
+
+            <Spinner
+                android:id="@+id/item_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dip"
+                android:background="@color/tranparentColor"
+                android:paddingLeft="35dp"
+                android:paddingRight="20dp"
+                android:textColor="@android:color/darker_gray" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/droparrow" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/group_linear"
+        >
+        <TextView
+            android:id="@+id/typeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Type"
+            android:layout_marginTop="10dip"
+            android:inputType="textCapWords"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/group" />
+            <Spinner
+                android:layout_marginTop="3dip"
+                android:id="@+id/type_spinner"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/tranparentColor"
+                android:paddingLeft="40dp"
+                android:paddingRight="20dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/droparrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dip"
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:inputType="textCapWords"
+        android:textSize="14sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/darker_gray"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selected_date_relative"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blanck_section"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/selected_date_text"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_centerInParent="true"
+            android:textSize="14sp"
+            android:paddingLeft="32dp"
+            android:layout_marginRight="15dp"
+            android:drawableRight="@drawable/droparrow"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Target"
+        android:visibility="gone"
+        android:layout_marginTop="5dip"
+        android:layout_weight="1.8"
+        android:inputType="textCapWords"
+        android:textSize="18sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/darker_gray"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/smalltextbox"
+        >
+    <Spinner
+        android:layout_marginTop="3dip"
+        android:id="@+id/spinner"
+
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@color/whiteColor"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/darker_gray"
+        android:layout_height="wrap_content"
+        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/droparrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="Your Target"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/targetEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/smalltextbox"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="number"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="Achive"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/achiveEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/smalltextbox"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="3dp"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:paddingLeft="3dp"
+                android:text="Item"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+            />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:paddingLeft="3dp"
+                android:text="Your target"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+            />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="Achive"
+                android:paddingLeft="1dp"
+                android:layout_margin="2dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:id="@+id/submitBtn"
+        android:paddingBottom="5dp"
+        android:textColor="@color/whiteColor"
+        android:text="Submit"
+        android:background="@drawable/submit_btn"
+      />
+
+</LinearLayout>
+    </ScrollView>
+</RelativeLayout>

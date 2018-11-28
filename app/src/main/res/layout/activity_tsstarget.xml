@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_nav"
+    tools:context="alina.com.rms.activities.headquaterActivities.OHETargetActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dip"
+        android:padding="10dip"
+        android:background="@color/whiteColor"
+        >
+
+        <TextView
+            android:id="@+id/placeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Group"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1.8"
+            android:visibility="gone"
+            android:inputType="textCapWords"
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <Spinner
+                android:layout_marginTop="3dip"
+                android:id="@+id/spinner_target"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/whiteColor"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/droparrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:inputType="textCapWords"
+            android:text="Select Item"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    <!--26-02-18-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="gone"
+            android:layout_marginTop="10dip"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:inputType="textCapWords"
+                android:text="Select Month"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="Select Year"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/blanck_section"
+                    android:scaleType="fitXY"
+                    />
+                <Spinner
+                    android:layout_marginTop="3dip"
+                    android:id="@+id/spinner_month"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/tranparentColor"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_height="wrap_content"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/droparrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/blanck_section"
+                    android:scaleType="fitXY"
+                    />
+                <Spinner
+                    android:layout_marginTop="3dip"
+                    android:id="@+id/spinner_year"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/tranparentColor"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_height="wrap_content"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/droparrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/group_linear"
+            >
+            <TextView
+                android:id="@+id/typeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Type"
+                android:layout_marginTop="10dip"
+                android:inputType="textCapWords"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/group" />
+                <Spinner
+                    android:layout_marginTop="3dip"
+                    android:id="@+id/type_spinner"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/tranparentColor"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_height="wrap_content"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/droparrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_add_civil"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="10dip"
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_heading_civil"
+                android:layout_height="wrap_content"
+                android:text="A. Civil Engg. Works"
+                android:inputType="textCapWords"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_add_electrical"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="10dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B. Electrical works"
+                android:inputType="textCapWords"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/darker_gray"
+                />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:id="@+id/submitBtn"
+            android:text="Submit"
+            android:textColor="@color/whiteColor"
+            android:paddingBottom="5dp"
+            android:background="@drawable/submit_btn" />
+
+    </LinearLayout>
+   </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fitsSystemWindows="true"
+tools:openDrawer="start"
+android:id="@+id/drawer_layout"
+tools:context="alina.com.rms.activities.SplashScreen2">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/header_top"
+        android:orientation="vertical"
+        >
+    <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/header_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+         >
+    </WebView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imgView"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/nointernetconnection"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="click here to refresh"
+        android:gravity="center"
+        android:id="@+id/textRefresh"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        />
+</RelativeLayout>
+<!--android:layout_marginTop="?attr/actionBarSize"-->
+<!--    <android.support.v4.widget.NestedScrollView
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+
+        >-->
+<RelativeLayout
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    android:visibility="gone"
+    >
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/left_nevigation"
+        android:scaleType="fitXY"
+        />
+    <!--
+    this things can also add in linear for starting from top
+    android:focusable="true"
+    android:focusableInTouchMode="true"-->
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_title"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        >
+        <include
+            layout="@layout/nav_header_main"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_title"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:id="@+id/recycler_view"
+        ></android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+<!--    </android.support.v4.widget.NestedScrollView>-->
+</android.support.v4.widget.DrawerLayout>
